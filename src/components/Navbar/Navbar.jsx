@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <>
-      <div className=" bg-[#FFFAFA] flex h-16 shadow w-full fixed items-center lg:px-10 px-6 py-2 justify-between">
+      <div className="bg-[#FFFAFA] flex h-16 shadow w-full fixed items-center lg:px-10 px-6 py-2 justify-between">
         <div>
           <a href="" className="flex items-center gap-1 cursor-pointer">
             <LogoSvg />
@@ -57,7 +57,7 @@ function Navbar() {
             >
               <ion-icon name="close" size="large"></ion-icon>
             </button>
-            {links.map(({ id, link, icon }) => (
+            {links.map(({ id, link}) => (
               <li
                 key={id}
                 className="flex px-8 my-6 justify-center hover:bg-black w-full hover:text-white hover:border-l-purple-500 hover:border-l-4"
@@ -75,6 +75,7 @@ function Navbar() {
             ))}
           </ul>
         )}
+      
       </div>
     </>
   );
