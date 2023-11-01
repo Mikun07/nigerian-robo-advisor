@@ -13,10 +13,10 @@ function Navbar() {
 
   return (
     <>
-      <div className="bg-[#FFFAFA] flex h-16 shadow w-full fixed items-center lg:px-10 px-6 py-2 justify-between">
+      <div className="bg-[#FFFFFF] flex h-16 shadow w-full fixed items-center lg:px-10 px-4 py-2 justify-between">
         <div>
           <a href="" className="flex items-center gap-1 cursor-pointer">
-            <LogoSvg />
+            <LogoSvg Fill="#1A1A1A"/>
             <h2 className=" capitalize font-bold">Robo Advisor</h2>
           </a>
         </div>
@@ -38,7 +38,7 @@ function Navbar() {
           <button className="bg-transparent px-2 py-1 capitalize">
             log in
           </button>
-          <button className="bg-purple-500 px-6 rounded-xl py-2 capitalize hover:scale-105 duration-200 text-[#FFFAFA]">
+          <button className="bg-gradient-to-tr from-Dark-Blue from-60% to-Blue via-40% px-6 rounded-xl py-2 capitalize hover:scale-105 duration-200 text-White">
             sign up
           </button>
         </div>
@@ -50,7 +50,7 @@ function Navbar() {
           <ion-icon name="menu" size="large"></ion-icon>
         </div>
         {nav && (
-          <ul className="absolute top-0 right-0 w-[50%] h-screen bg-[#FFFAFA]">
+          <ul className="absolute top-0 right-0 w-[50%] h-screen bg-White">
             <button
               onClick={() => setNav(!nav)}
               className="text-2xl mt-4 mx-10 rounded-md flex items-end justify-end text-black cursor-pointer hover:scale-105 duration-200"
