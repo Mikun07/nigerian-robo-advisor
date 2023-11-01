@@ -11,8 +11,8 @@ function Footer() {
   }, []);
   return (
     <>
-      <div className="bg-White h-full border-t-2 border-Gray text-Dark-Gray w-full lg:px-10 px-4 py-2">
-        <div className="flex lg:flex-row flex-col pt-4 gap-6 lg:gap-0">
+      <div className="bg-White h-full border-t-2 border-Gray text-Dark-Gray w-full lg:px-10 px-2 py-2">
+        <div className="flex lg:flex-row flex-col pt-4 gap-6 lg:justify-between">
           <div className="flex flex-col gap-10 mb-6">
             <div>
               <a href="" className="flex items-center gap-1 cursor-pointer">

@@ -31,6 +31,16 @@ a {
   text-decoration: none;
 }
 
+b {
+  color: #4070FB;
+}
+
+.gradientText {
+  background-image: linear-gradient(to right, #4070FB, #40CEFB);
+  background-clip: text;
+  color: transparent;
+}
+
 /* width */
 .custom__scrollbar::-webkit-scrollbar {
   width: 10px;
