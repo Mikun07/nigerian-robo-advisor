@@ -11,24 +11,24 @@ function Footer() {
   }, []);
   return (
     <>
-      <div className="bg-White h-full border-t-2 border-Gray text-Dark-Gray w-full lg:px-10 px-2 py-2">
+      <div className="bg-Black h-full border-t-2 border-Gray text-Gray w-full lg:px-10 px-2 py-2">
         <div className="flex lg:flex-row flex-col pt-4 gap-6 lg:justify-between">
           <div className="flex flex-col gap-10 mb-6">
             <div>
               <a href="" className="flex items-center gap-1 cursor-pointer">
                 <LogoSvg Fill="#1A1A1A" />
-                <h2 className=" capitalize font-bold text-Black">
-                  Robo Advisor
+                <h2 className=" capitalize font-bold text-White">
+                  Nigerian RoboAdvisor
                 </h2>
               </a>
             </div>
 
             <div className="flex flex-col gap-4">
-              <h3 className="text-Dark-Gray font-semibold">
+              <h3 className="text-Gray font-semibold">
                 join our newsletter to stay up to date on features and releases.
               </h3>
               <InputWithButton />
-              <p className="text-Dark-Gray">
+              <p className="text-Gray">
                 By subscribing you agree to our privacy policy and provide
                 consent to receive updates from our company.
               </p>
@@ -38,7 +38,7 @@ function Footer() {
           <div className="grid lg:grid-cols-3 grid-cols-2 gap-x-6 gap-y-8 text-base tracking-tight leading-6">
             <div>
               <ul className="flex flex-col gap-4">
-                <h2 className="font-bold text-Black capitalize">About Us</h2>
+                <h2 className="font-bold text-White capitalize">About Us</h2>
                 <li>Business</li>
                 <li>Careers</li>
                 <li>Our Accounts</li>
@@ -47,7 +47,7 @@ function Footer() {
             </div>
             <div>
               <ul className="flex flex-col gap-4">
-                <h2 className="font-bold text-Black capitalize">
+                <h2 className="font-bold text-White capitalize">
                   Our products
                 </h2>
                 <li>Managed investments</li>
@@ -61,7 +61,7 @@ function Footer() {
 
             <div>
               <ul className="flex flex-col gap-4">
-                <h2 className="font-bold text-Black capitalize">
+                <h2 className="font-bold text-White capitalize">
                   Social networks
                 </h2>
 
@@ -86,10 +86,10 @@ function Footer() {
 
         <hr className="mt-8 border-2 border-Gray" />
 
-        <div className="mt-12 flex font-bold lg:text-lg text-xs items-center justify-between text-Black">
+        <div className="mt-12 flex font-bold lg:text-lg text-xs items-center justify-between text-White">
           <div>
-            <p className=" text-Dark-Gray">
-              © {thisYear} Robo Advisor.{"  "}All rights reserved.
+            <p className=" text-Gray">
+              © {thisYear} Nigerian RoboAdvisor.{"  "}All rights reserved.
             </p>
           </div>
 

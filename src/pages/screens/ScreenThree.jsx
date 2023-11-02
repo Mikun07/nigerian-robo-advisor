@@ -8,11 +8,11 @@ function ScreenThree() {
         {/* info */}
         <div className="flex flex-col gap-5">
           <h1 className="lg:text-6xl text-4xl tracking-wide font-semibold">
-            What others have said about Robo Advisor
+            What others have said about Nigerian RoboAdvisor
           </h1>
           <p className=" text-Gray">
-            Robo Advisor have been trusted by users from various circles.
-            Reviews are by Robo Advisor clients. Clients received no form
+            Nigerian RoboAdvisor have been trusted by users from various circles.
+            Reviews are by Nigerian RoboAdvisor clients. Clients received no form
             of compensation.
           </p>
         </div>

@@ -17,14 +17,14 @@ function Navbar() {
         <div>
           <a href="" className="flex items-center gap-1 cursor-pointer">
             <LogoSvg Fill="#1A1A1A"/>
-            <h2 className=" capitalize font-bold">Robo Advisor</h2>
+            <h2 className=" capitalize font-bold">Nigerian RoboAdvisor</h2>
           </a>
         </div>
 
         <div className="lg:flex hidden items-center">
-          {links.map(({ id, link }) => (
+          {links.map(({ link }, index) => (
             <span
-              key={id}
+              key={index}
               className={`capitalize cursor-pointer text-lg hover:scale-115 duration-300 font-bold px-1 leading-5`}
             >
               <Link to={link} smooth duration={700}>

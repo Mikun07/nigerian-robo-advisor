@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RangeSlider from "../../../components/Slider/RangeSlider";
+
 import DoughnutChart from "../../../components/Chart/DoughnutChart";
 import axios from "axios";
 
@@ -39,25 +39,21 @@ function RightGrid() {
     }
   }, [sliderValue]);
 
-  // Function to update the slider value
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value);
   };
 
-  // Use useEffect to update the slider's visual representation when the value changes
   useEffect(() => {
     const rangeThumb = document.getElementById("rangeThumb");
     const rangeNumber = document.getElementById("rangeNumber");
     const rangeLine = document.getElementById("rangeLine");
     const rangeInput = document.getElementById("rangeInput");
 
-    // Update the visual representation based on the sliderValue state
     rangeNumber.textContent = sliderValue;
     const thumbPosition = Number(sliderValue / rangeInput.max);
     const space = rangeInput.offsetWidth - rangeThumb.offsetWidth;
     rangeThumb.style.left = thumbPosition * space + "px";
     rangeLine.style.width = rangeThumb.style.left;
-    // rangeLine.style.width = sliderValue + '%';
   }, [sliderValue]);
 
   return (
@@ -67,32 +63,35 @@ function RightGrid() {
           <p>Loading</p>
         </div>
       ) : (
-        <div className="flex flex-col gap-[100px] items-center justify-center w-full">
-          <div className="range">
-            <div className="rangeContent">
-              <div className="rangeSlider">
-                <div className="rangeSliderLine" id="rangeLine"></div>
-              </div>
-
-              <div className="rangeThumb" id="rangeThumb">
-                <div className="rangeValue">
-                  <span className="rangeValueNumber" id="rangeNumber">
-                    {sliderValue}
-                  </span>
+        <div className="flex flex-col items-center justify-center w-full">
+          <div className="flex w-full justify-center lg:mt-[100px]">
+            <div className="range">
+              <div className="rangeContent">
+                <div className="rangeSlider">
+                  <div className="rangeSliderLine" id="rangeLine"></div>
                 </div>
-              </div>
 
-              <input
-                type="range"
-                className="rangeInput"
-                id="rangeInput"
-                min="0"
-                max={max}
-                value={sliderValue}
-                onChange={handleSliderChange}
-              />
+                <div className="rangeThumb" id="rangeThumb">
+                  <div className="rangeValue">
+                    <span className="rangeValueNumber" id="rangeNumber">
+                      {sliderValue}
+                    </span>
+                  </div>
+                </div>
+
+                <input
+                  type="range"
+                  className="rangeInput"
+                  id="rangeInput"
+                  min="0"
+                  max={max}
+                  value={sliderValue}
+                  onChange={handleSliderChange}
+                />
+              </div>
             </div>
           </div>
+
           <DoughnutChart labels={labels} values={selectedStock} />
         </div>
       )}
