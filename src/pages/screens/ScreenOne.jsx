@@ -51,7 +51,7 @@ function ScreenOne() {
           </div>
 
           {/* image */}
-          <div className="relative lg:mt-10 mt-[300px] lg:w-[85%] rounded flex justify-center items-center">
+          <div className="relative lg:mt-10 mt-[300px] lg:w-[87%] w-full rounded flex justify-center items-center">
             <img src={DP} alt=""/>
           </div>
         </div>
