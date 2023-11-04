@@ -23,7 +23,7 @@ function ScreenThree() {
             Text={
               "Performing better - east to us - good source for info. Good recommendation for your investing"
             }
-            Name="Festus-olaleye Ayomikun"
+            Name="Ayomikun Festus-olaleye"
             From="from apple app Store"
             Rating={4.8}
           />
@@ -31,7 +31,7 @@ function ScreenThree() {
             Text={
               "Performing better - east to us - good source for info. Good recommendation for your investing"
             }
-            Name="Festus-olaleye Ayomikun"
+            Name="Ayomikun Festus-olaleye"
             From="from google play Store"
             Rating={4.7}
           />

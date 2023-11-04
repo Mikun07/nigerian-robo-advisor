@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="bg-[#FFFFFF] flex h-16 shadow w-full fixed z-50 items-center lg:px-10 px-2 py-2 justify-between">
+      <div className="bg-[#FFFAFA] flex h-16 shadow w-full fixed z-50 items-center lg:px-10 px-2 py-2 justify-between">
         <div>
           <a href="" className="flex items-center gap-1 cursor-pointer">
             <LogoSvg Fill="#1A1A1A"/>

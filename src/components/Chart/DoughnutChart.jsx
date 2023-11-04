@@ -14,7 +14,7 @@ function DoughnutChart({labels, values}) {
         data: values,
         backgroundColor: [
           "#4A5567",
-          "#E3E8EF",
+          "#F4E61C",
           "#34D399",
           "#40CEFB",
           "#4070FB",
@@ -22,7 +22,7 @@ function DoughnutChart({labels, values}) {
           "#8A0E46",
           "#9ACCDB",
           "#D1DB9A",
-          "#F4E61C"
+          "#E3E8EF"
         ],
         hoverOffset: 4,
       },
@@ -36,7 +36,7 @@ function DoughnutChart({labels, values}) {
 
   return (
     <>
-      <div className="w-full h-full lg:w-[68%] my-10 flex justify-center">
+      <div className="w-full h-full lg:w-[63%] my-10 flex justify-center">
         <Doughnut data={data} options={config} />
       </div>
     </>

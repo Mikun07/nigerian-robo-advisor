@@ -1,5 +1,6 @@
 import React from "react";
 import RangeSlider from "../../../components/Slider/RangeSlider";
+import BarChart from "../../../components/Chart/BarChart";
 
 function LeftGrid() {
   return (
@@ -17,7 +18,7 @@ function LeftGrid() {
           </div>
 
           <div>
-            <p className="text-justify lg:px-0 px-2 pb-6 lg:pb-0">
+            <p className="text-justify pb-6 lg:pb-0">
               The Robo Advisor offers a diverse array of features aimed at
               simplifying the investment process. Specifically designed to
               facilitate a seamless entry into the world of investing, it
@@ -31,6 +32,8 @@ function LeftGrid() {
             </p>
           </div>
         </div>
+
+        {/* <BarChart /> */}
       </div>
     </>
   );

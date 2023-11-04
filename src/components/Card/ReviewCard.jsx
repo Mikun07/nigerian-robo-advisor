@@ -1,5 +1,6 @@
 import React from "react";
 import StarSvg from "../Icons/star";
+import AvatarSvg from "../Icons/avatar";
 
 function ReviewCard({ Text, Name, From, Rating }) {
   return (
@@ -8,16 +9,14 @@ function ReviewCard({ Text, Name, From, Rating }) {
         <p className="font-medium leading-5 tracking-tight">{Text}</p>
 
         <div className="flex items-center gap-2">
-          <div className=" h-[50px] w-[50px] border-2 border-Black rounded-full"></div>
-          <div className="flex flex-col gap-1">
-            <p>{Name}</p>
-            <div className="flex items-center gap-1 ">
-              <span className="flex items-center gap-2">
-                <StarSvg /> {Rating}
-                <p className="list-disc list-outside capitalize">
-                 {From}
-                </p>
-              </span>
+          <div>
+            <AvatarSvg />
+          </div>
+          <div className="flex flex-col gap-1 text-xs items-center">
+            <p className=" capitalize">{Name}</p>
+            <div className="flex items-center ml-3 gap-1">
+              <StarSvg /> {Rating}
+              <p className="capitalize">{From}</p>
             </div>
           </div>
         </div>

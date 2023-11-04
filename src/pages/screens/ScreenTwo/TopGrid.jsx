@@ -1,4 +1,8 @@
 import React from "react";
+import LightningSvg from "../../../components/Icons/Lightning";
+import GridSvg from "../../../components/Icons/grid";
+import ShieldSvg from "../../../components/Icons/shield";
+import CopySvg from "../../../components/Icons/copy";
 
 function TopGrid() {
   return (
@@ -21,7 +25,9 @@ function TopGrid() {
           <div className="flex flex-col gap-10">
             <div className="flex gap-3">
               {/* image */}
-              <div className=" h-[50px] w-[50px] border-2 rounded"></div>
+              <div className="">
+                <LightningSvg />
+              </div>
               {/* info */}
               <div className="flex w-[90%] flex-col gap-1">
                 <h3 className=" text-Black font-semibold">
@@ -36,7 +42,9 @@ function TopGrid() {
 
             <div className="flex gap-3">
               {/* image */}
-              <div className=" h-[50px] w-[50px] border-2 rounded"></div>
+              <div>
+                <GridSvg />
+              </div>
               {/* info */}
               <div className="flex w-[90%] flex-col gap-1">
                 <h3 className=" text-Black font-semibold">
@@ -51,7 +59,9 @@ function TopGrid() {
 
             <div className="flex gap-3">
               {/* image */}
-              <div className=" h-[50px] w-[50px] border-2 rounded"></div>
+              <div>
+                <ShieldSvg />
+              </div>
               {/* info */}
               <div className="flex w-[90%] flex-col gap-1">
                 <h3 className=" text-Black font-semibold">Security System</h3>
@@ -64,7 +74,9 @@ function TopGrid() {
 
             <div className="flex gap-3">
               {/* image */}
-              <div className=" h-[50px] w-[50px] border-2 rounded"></div>
+              <div>
+                <CopySvg />
+              </div>
               {/* info */}
               <div className="flex w-[90%] flex-col gap-1">
                 <h3 className=" text-Black font-semibold">Fast Transaction</h3>

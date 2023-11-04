@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import DoughnutChart from "../../../components/Chart/DoughnutChart";
 import axios from "axios";
+import BarChart from "../../../components/Chart/BarChart";
 
 function RightGrid() {
   const [loadingState, setLoadingState] = useState(false);
@@ -60,7 +61,9 @@ function RightGrid() {
     <>
       {loadingState ? (
         <div className="flex flex-col gap-[100px] items-center justify-center w-full">
-          <p>Loading</p>
+          <div className="flex items-center justify-center h-screen">
+            <div className="w-16 h-16 rounded-full border-t-4 border-blue-500 border-solid animate-pulse"></div>
+          </div>
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center w-full">
@@ -93,6 +96,7 @@ function RightGrid() {
           </div>
 
           <DoughnutChart labels={labels} values={selectedStock} />
+          {/* <BarChart labels={labels} values={selectedStock}/> */}
         </div>
       )}
     </>

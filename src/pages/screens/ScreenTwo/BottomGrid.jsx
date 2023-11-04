@@ -1,4 +1,7 @@
 import React from "react";
+import GoalSvg from "../../../components/Icons/goal";
+import ClickSvg from "../../../components/Icons/Click";
+import BankSvg from "../../../components/Icons/bank";
 
 function BottomGrid() {
   return (
@@ -30,7 +33,9 @@ function BottomGrid() {
           <div className="flex flex-col gap-10">
             <div className="flex gap-3">
               {/* image */}
-              <div className=" h-[50px] w-[50px] border-2 rounded"></div>
+              <div>
+                <GoalSvg />
+              </div>
               {/* info */}
               <div className=" w-[90%] flex flex-col gap-1">
                 <h3 className=" text-Black font-semibold">Set Your Goals</h3>
@@ -44,7 +49,9 @@ function BottomGrid() {
 
             <div className="flex gap-3">
               {/* image */}
-              <div className=" h-[50px] w-[50px] border-2 rounded"></div>
+              <div>
+                <ClickSvg />
+              </div>
               {/* info */}
               <div className=" w-[90%] flex flex-col gap-1">
                 <h3 className=" text-Black font-semibold">Choose Product</h3>
@@ -58,7 +65,9 @@ function BottomGrid() {
 
             <div className="flex gap-3">
               {/* image */}
-              <div className=" h-[50px] w-[50px] border-2 rounded"></div>
+              <div>
+                <BankSvg />
+              </div>
               {/* info */}
               <div className="flex w-[90%] flex-col gap-1">
                 <h3 className="text-Black font-semibold">
