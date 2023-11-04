@@ -87,6 +87,7 @@ function RightGrid() {
                   className="rangeInput"
                   id="rangeInput"
                   min="0"
+                  step={1}
                   max={max}
                   value={sliderValue}
                   onChange={handleSliderChange}

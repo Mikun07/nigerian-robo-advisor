@@ -3,11 +3,12 @@ import LightningSvg from "../../../components/Icons/Lightning";
 import GridSvg from "../../../components/Icons/grid";
 import ShieldSvg from "../../../components/Icons/shield";
 import CopySvg from "../../../components/Icons/copy";
+import PhoneViewTwoSvg from "../../../assets/PH.jpg";
 
 function TopGrid() {
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
         {/* info */}
         <div className=" flex flex-col gap-10">
           <div className=" flex flex-col gap-6">
@@ -90,7 +91,9 @@ function TopGrid() {
         </div>
 
         {/* image */}
-        <div></div>
+        <div className="relative lg:mt-0 mt-[190px] lg:w-[50%] w-full rounded flex justify-center items-center">
+          <img src={PhoneViewTwoSvg} alt="" />
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import PhoneViewOneSvg from "../../../assets/Phone.jpg"
 import GoalSvg from "../../../components/Icons/goal";
 import ClickSvg from "../../../components/Icons/Click";
 import BankSvg from "../../../components/Icons/bank";
@@ -6,9 +7,11 @@ import BankSvg from "../../../components/Icons/bank";
 function BottomGrid() {
   return (
     <>
-      <div className="flex  items-center justify-between">
+      <div className="flex flex-col lg:flex-row gap-10 items-center">
         {/* image */}
-        <div></div>
+        <div className="relative lg:w-[50%] w-full rounded flex justify-center items-center">
+          <img src={PhoneViewOneSvg} alt=""/>
+        </div>
 
         {/* info */}
         <div className=" flex flex-col gap-10">

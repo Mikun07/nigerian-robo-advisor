@@ -1,4 +1,5 @@
 import React from "react";
+import DP from "../../assets/DP.jpg";
 
 function ScreenOne() {
   return (
@@ -8,8 +9,7 @@ function ScreenOne() {
           {/* info */}
           <div className=" flex flex-col lg:gap-10 gap-6 justify-center ">
             <h1 className=" text-5xl font-bold tracking-tighter leading-[65px]">
-              The most trusted financial partner for{" "}
-              <b>Investing</b>
+              The most trusted financial partner for <b>Investing</b>
             </h1>
             <p className="tracking-tighter font-medium text-Dark-Gray">
               Unleash your money's potential. Get a personalized investing plan
@@ -40,7 +40,10 @@ function ScreenOne() {
                   Google play store rating
                 </p>
                 <div className="flex items-center gap-1">
-                <ion-icon name="logo-google-playstore" size="large"></ion-icon>
+                  <ion-icon
+                    name="logo-google-playstore"
+                    size="large"
+                  ></ion-icon>
                   <p>1,820 Reviews</p>
                 </div>
               </div>
@@ -48,7 +51,9 @@ function ScreenOne() {
           </div>
 
           {/* image */}
-          <div className=""></div>
+          <div className="relative lg:mt-10 mt-[300px] lg:w-[85%] rounded flex justify-center items-center">
+            <img src={DP} alt=""/>
+          </div>
         </div>
       </div>
     </>
