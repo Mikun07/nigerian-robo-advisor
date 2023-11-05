@@ -41,11 +41,11 @@ const StocksAndCryptoTable = () => {
   return (
     <div>
       <div className="w-full  rounded-md">
-        <div className="grid grid-cols-2 gap-4">
+        {/* <div className="grid grid-cols-2 gap-4">
           {product.map(({ name, img, title, price }, index) => (
             <li
               key={index}
-              className="flex lg:px-8 px-2 border-2 border-Dark-Gray py-2 items-center justify-between rounded-md"
+              className="flex lg:px-12 px-1 border-2 border-Gray py-2 items-center justify-between rounded-md"
             >
               <div className="flex lg:gap-4 gap-1 items-center ">
                 <img
@@ -55,7 +55,7 @@ const StocksAndCryptoTable = () => {
                 />
 
                 <div className="flex flex-col">
-                  <p className="text-Black lg:text-xl text-xs  ">{name}</p>
+                  <p className="text-Black lg:text-xl text-xs capitalize">{name}</p>
                   <p className="text-xs text-Dark-Gray">{title}</p>
                 </div>
               </div>
@@ -66,25 +66,25 @@ const StocksAndCryptoTable = () => {
               </div>
             </li>
           ))}
-        </div>
-        {/* <div>
+        </div> */}
+        <div>
           {stockData?.length > 0 ? (
             <div>
               {stockData.map((stock, index) => {
                 <li
                   key={index}
-                  className="flex px-8 border-4 border-Dark-Gray py-2 items-center justify-between rounded-md"
+                  className="flex px-8 border-4 border-Gray py-2 items-center justify-between rounded-md"
                 >
                   <div className="flex gap-4 items-center ">
                     <img
                       src={tickerContent[stock?.ticker]?.img}
                       alt={stock?.ticker}
-                      className="w-[100px] h-[100px] rounded-full"
+                      className="lg:w-[70px] w-[40px] rounded-full"
                     />
 
                     <div className="flex flex-col">
-                      <h2 className=" text-Black">{stock?.ticker}</h2>
-                      <p className="text-sm text-Dark-Gray capitalize">
+                      <h2 className=" text-Black lg:text-xl text-xs capitalize">{stock?.ticker}</h2>
+                      <p className="lg:text-xl text-xs text-Dark-Gray capitalize">
                         {tickerContent[stock?.ticker]?.title}
                       </p>
                     </div>
@@ -94,14 +94,14 @@ const StocksAndCryptoTable = () => {
                     <h2 className=" text-Black">{stock?.value}</h2>
                     {stock?.sign === "positive" ? (
                       // style green
-                      <p className="text-[#22C55E]">{stock?.percentage}</p>
+                      <p className="text-[#22C55E] text-xs">{stock?.percentage}</p>
                     ) : (
                       <>
                         {stock?.sign === "negative" ? (
                           // style red
-                          <p className="text-[#CC3333]">{stock?.percentage}</p>
+                          <p className="text-[#CC3333] text-xs">{stock?.percentage}</p>
                         ) : (
-                          <p className="text-sm text-Dark-Gray">
+                          <p className="text-xs text-Dark-Gray">
                             {stock?.percentage}
                           </p>
                         )}
@@ -112,9 +112,11 @@ const StocksAndCryptoTable = () => {
               })}
             </div>
           ) : (
-            <p>stock data not currently available</p>
+            <div className=" flex items-center justify-center">
+              <p>stock data not currently available</p>
+            </div>
           )}
-        </div> */}
+        </div>
       </div>
     </div>
   );
