@@ -91,7 +91,7 @@ function TopGrid() {
         </div>
 
         {/* image */}
-        <div className="relative lg:mt-0 mt-[190px] lg:w-[50%] w-full rounded flex justify-center items-center">
+        <div className="relative lg:mt-0 mt-[50px] lg:w-[50%] w-full rounded flex justify-center items-center">
           <img src={PhoneViewTwoSvg} alt="" />
         </div>
       </div>

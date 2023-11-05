@@ -1,11 +1,12 @@
 import React from "react";
 import DP from "../../assets/DP.jpg";
+import StocksAndCryptoTable from "../../components/Table/StockCryptoTable";
 
 function ScreenOne() {
   return (
     <>
-      <div className="h-screen lg:px-10 px-2 flex items-center">
-        <div className="flex lg:flex-row flex-col-reverse">
+      <div className="lg:h-screen lg:px-10 px-2 flex items-center">
+        <div className="flex justify-between lg:mt-0 mt-[150px] lg:flex-row flex-col">
           {/* info */}
           <div className=" flex flex-col lg:gap-10 gap-6 justify-center ">
             <h1 className=" text-5xl font-bold tracking-tighter leading-[65px]">
@@ -51,8 +52,8 @@ function ScreenOne() {
           </div>
 
           {/* image */}
-          <div className="relative lg:mt-10 mt-[300px] lg:w-[87%] w-full rounded flex justify-center items-center">
-            <img src={DP} alt=""/>
+          <div className="relative cursor-pointer lg:mt-10 mt-[50px] lg:w-[87%] w-full rounded flex justify-center items-center">
+            <StocksAndCryptoTable />
           </div>
         </div>
       </div>
