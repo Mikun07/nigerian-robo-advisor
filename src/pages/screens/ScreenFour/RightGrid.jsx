@@ -21,6 +21,11 @@ function RightGrid() {
         setMax(data.data?.length - 1 || 0);
         setLabels(Object.keys(data.data[0]).slice(2));
         setStockData(data.data);
+        setSelectedStockData(
+          Object.values(data.data[0])
+            .slice(2)
+            .map((val) => Number(val.split("%")[0]))
+        );
       })
       .catch((err) => {
         console.log({ err });

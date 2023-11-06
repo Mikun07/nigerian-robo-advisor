@@ -8,43 +8,45 @@ const useStockData = () => {
   const url = `https://api.twelvedata.com/price?symbol=${symbols}&apikey=${TWELVE_API_KEY}`;
 
   function updateStockData(newStockData) {
-      const formattedStockData = Object.keys(newStockData).map((ticker) => {
-      const currentPrice = parseFloat(stockData[ticker]?.price) ?? 0;
-      const newPrice = parseFloat(newStockData[ticker]?.price) ?? 0;
+    // const response = JSON.parse(localStorage.getItem("response"));
+    const currentStocks = JSON.parse(localStorage.getItem("currentStocks"));
+    const formattedData = Object.keys(newStockData).map((key, index) => {
+      const oldStock = currentStocks?.find((curr) => curr.key === key);
+      const oldPrice = parseFloat(
+        (oldStock?.value ?? "0")?.replace(/[^0-9.]/g, "")
+      );
+      const newPrice =
+        parseFloat(parseFloat(newStockData[key]?.price).toFixed(2)) ?? 0;
 
-      const percentageDiff =
-        isFinite(currentPrice) && isFinite(newPrice)
-          ? ((newPrice - currentPrice) / currentPrice) * 100
+      const percentage =
+        oldPrice > 0
+          ? ((newPrice - oldPrice) / oldPrice) * 100
           : 0;
 
-      console.log({ currentPrice, newPrice, percentageDiff });
-
-      let tickerSign;
-      if (percentageDiff > 0) {
-        tickerSign = "positive";
-      } else if (percentageDiff < 0) {
-        tickerSign = "negative";
+      console.log({oldPrice, newPrice, percentage})
+      let ticker;
+      if (percentage > 0) {
+        ticker = "positive";
+      } else if (percentage < 0) {
+        ticker = "negative";
       } else {
-        tickerSign = "neutral";
+        ticker = "neutral";
       }
-
       return {
-        ticker: ticker,
-        percentage: `${percentageDiff.toFixed(2)}%`,
-        sign: tickerSign,
+        key,
+        percentage: `${percentage.toFixed(2)}%`,
+        ticker,
         value: new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",
           minimumFractionDigits: 2,
-        }).format(newStockData[ticker]?.price),
+        }).format(newPrice),
       };
     });
 
-    console.log(formattedStockData);
-    setStockData(formattedStockData);
-    if (formattedStockData.length) {
-      localStorage.setItem("stocks", JSON.stringify(formattedStockData));
-    }
+    console.log(formattedData);
+    setStockData(formattedData);
+    localStorage.setItem("currentStocks", JSON.stringify(formattedData));
   }
 
   async function fetchPrices(url) {
@@ -52,17 +54,14 @@ const useStockData = () => {
 
     axios(url).then((res) => {
       response = res.data;
-      if (response.code === 429 && response.status === "error") {
-        const storedData = JSON.parse(localStorage.getItem("stocks") || null);
-        if (storedData) {
-          updateStockData(storedData);
-        }
-        return;
-      }
+      if (response.code === 429 && response.status === "error") return;
       updateStockData(response);
+      localStorage.setItem("response", JSON.stringify(response));
     });
   }
   useEffect(() => {
+    // ! for testing
+    // updateStockData(JSON.parse(localStorage.getItem("response")));
     fetchPrices(url);
     // const interval = setTimeout(() => {
     //     fetchPrices(url);
