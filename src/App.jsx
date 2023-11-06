@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Navbar from "./components/navbar/navbar";
-import Footer from "./components/Footer/Footer";
+import React from "react";
+import Navbar from "../src/components/Navbar/Navbar";
+import Footer from "../src/components/Footer/Footer";
 import LandingPage from "./pages/Landing/LandingPage";
 
 function App() {
