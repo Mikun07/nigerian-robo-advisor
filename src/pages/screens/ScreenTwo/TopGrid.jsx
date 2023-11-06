@@ -1,5 +1,6 @@
+/* eslint-disable */
 import React from "react";
-import LightningSvg from "../../../components/Icons/lightning"; /* eslint-disable */
+import LightningSvg from "../../../components/Icons/lightning"; 
 import GridSvg from "../../../components/Icons/grid";
 import ShieldSvg from "../../../components/Icons/shield";
 import CopySvg from "../../../components/Icons/copy";
