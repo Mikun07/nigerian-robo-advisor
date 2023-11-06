@@ -103,6 +103,7 @@ b {
   border-radius: 50%;
   box-shadow: 0 4px 12px hsla(256, 72%, 24%, 0.2);
   position: absolute;
+  left: 0;
 }
 
 .rangeValue {

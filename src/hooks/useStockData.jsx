@@ -61,8 +61,8 @@ const useStockData = () => {
   }
   useEffect(() => {
     // ! for testing
-    // updateStockData(JSON.parse(localStorage.getItem("response")));
-    fetchPrices(url);
+    updateStockData(JSON.parse(localStorage.getItem("response")));
+    // fetchPrices(url);
     // const interval = setTimeout(() => {
     //     fetchPrices(url);
     // }, 15000);

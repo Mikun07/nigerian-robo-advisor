@@ -53,7 +53,9 @@ function ScreenOne() {
 
           {/* image */}
           <div className="relative cursor-pointer lg:mt-10 mt-[50px] lg:w-[87%] w-full rounded flex justify-center items-center">
-            <StocksAndCryptoTable />
+            {/* <StocksAndCryptoTable /> */}
+
+            <img src={DP} alt="" />
           </div>
         </div>
       </div>
