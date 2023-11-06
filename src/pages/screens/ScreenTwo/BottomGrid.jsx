@@ -1,7 +1,7 @@
 import React from "react";
 import PhoneViewOneSvg from "../../../assets/Phone.jpg"
 import GoalSvg from "../../../components/Icons/goal";
-import ClickSvg from "../../../components/Icons/Click";
+import ClickSvg from "../../../components/Icons/click";
 import BankSvg from "../../../components/Icons/bank";
 
 function BottomGrid() {
